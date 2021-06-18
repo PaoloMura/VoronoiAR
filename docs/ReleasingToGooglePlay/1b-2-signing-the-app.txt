@@ -1,0 +1,22 @@
+signing the app
+see https://developer.android.com/studio/publish/app-signing#debug-mode
+
+debug signing
+  android studio automatically signs the app every time it is run or debugged
+  the keystore is located in $HOME/.android/debug.keystore (C:/Users/USERNAME/.android/debug.keystore)
+  the details required each time to sign the app are stored in a 'configuration' object by android studio
+     the object includes the keystore location, keystore password, key name, and key password
+  the debug certificate expires after 30 years
+    to reset
+      see https://developer.android.com/studio/publish/app-signing#expdebug
+
+signing the app for release to google play store
+  when it is time to release the app, the procedure for signing it for release can be found here
+    see https://developer.android.com/studio/publish/app-signing#sign-apk
+  generating an upload key and keystore
+    done in android studio
+      see https://developer.android.com/studio/publish/app-signing#generate-key
+  signing the app with the upload key (or with an already existing app signing key)
+      see https://developer.android.com/studio/publish/app-signing#sign_release
+
+ ***it is recommended to opt-in for play app signing***

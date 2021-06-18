@@ -1,0 +1,15 @@
+9:30am Tuesday 20th October
+
+The initial meeting was used for introductions between team members and the client. The team also put questions forward in order to better understand the project and required features. A summary of the main points raised follows:
+
+-Clarification on the model
+  -the points are all within the Fry Building
+  -no more than 3 cells will ever meet at a point
+-Future resources
+  -client can provide a csv file of the points as well as the coordinates of the frame corners
+  -will be granted access to the Fry Building
+-Initial research and project direction ideas
+  -efficient algorithms for generating the Voronoi pattern
+  -could attempt to generate the pattern virtually to check correctness, comparing to the sculpture
+  -could start with a wireframe model, then consider 3D objects/multiple 2D slices
+-Client is happy for the project to be free, open source

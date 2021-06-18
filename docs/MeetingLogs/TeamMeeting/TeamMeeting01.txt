@@ -1,0 +1,10 @@
+2pm Thursday 15th October
+
+The team had a virtual meeting that covered the following:
+
+-Decided to document meeting progress/results on GitHub
+-Chose to use Discord as a platform for virtual meetings
+-Discussed interpretations of the project
+-Created a list of questions for the first client meeting
+-Determined everyone's availability for meeting with the client
+-Allocated research tasks to each team member on AR/mobile technologies and the theory behind Voronoi patterns

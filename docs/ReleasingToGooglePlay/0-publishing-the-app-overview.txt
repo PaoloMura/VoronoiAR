@@ -1,0 +1,29 @@
+publishing the app overview
+see https://developer.android.com/studio/publish
+
+the process (2 steps)
+
+preparing the app
+  see '1-preparing-for-release.txt'
+  see https://developer.android.com/studio/publish#publishing-prepare
+    i.   configure the app for release
+           - remove Log calls
+           - remove android:debuggable attribute from manifest file
+           - give android:versionCode attribute in <manifest> element a value
+           - give android:versionName attribute in <manifest> element a value   
+           - if using Gradle build files, use the 'release' build type to set build settings for the published version
+           - configure other settings
+    ii.  build and sign a release version
+           - use Gradle build files with the 'release' build type to build and sign a release version
+           - 
+    iii. test the release version of the application
+           - test release version on at least one device
+    iv.  updating application resources
+           - make sure all files needed by the app are updated and are included
+    v.   remote servers and services
+           - if the app uses remote servers, then make sure that they are set up and ready
+
+releasing the app
+  see '2a-releasing-on-google-play.txt'
+  see '2b-releasing-on-a-website.txt'
+  see https://developer.android.com/studio/publish#publishing-release

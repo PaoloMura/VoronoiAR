@@ -1,0 +1,527 @@
+<!--
+   Copyright 2016 Google LLC
+
+   Licensed under the Apache License, Version 2.0 (the "License");
+   you may not use this file except in compliance with the License.
+   You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+   Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an "AS IS" BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License.
+-->
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.google.ar.core.examples.java.augmentedimage.AugmentedImageActivity">
+
+  <ImageView
+      android:id="@+id/image_view_fit_to_scan"
+      android:layout_width="0dp"
+      android:layout_height="0dp"
+      android:contentDescription="@string/ar_description"
+      android:scaleType="fitCenter"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent" />
+
+  <android.opengl.GLSurfaceView
+      android:id="@+id/surfaceview"
+      android:layout_width="0dp"
+      android:layout_height="0dp"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent" />
+
+  <TableLayout
+      android:id="@+id/firstRow"
+      android:layout_width="match_parent"
+      android:layout_height="100dp"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      tools:visibility="gone">
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+      <Button
+          android:id="@+id/btnFactorUp"
+          style="@style/Widget.AppCompat.Button.Borderless"
+          android:layout_width="0dp"
+          android:layout_height="match_parent"
+          android:layout_weight="1"
+          android:alpha="0.6"
+          android:background="@drawable/triangle_up"
+          android:onClick="factorUp" />
+
+      <Button
+          android:id="@+id/btnRotateCCW"
+          style="@style/Widget.AppCompat.Button.Borderless"
+          android:layout_width="0dp"
+          android:layout_height="match_parent"
+          android:layout_weight="1"
+          android:alpha="0.6"
+          android:background="@drawable/arrow_counterclockwise"
+          android:onClick="rotateCCW" />
+
+      <Button
+          android:id="@+id/btnNOOP1"
+          style="@style/Widget.AppCompat.Button.Borderless"
+          android:layout_width="0dp"
+          android:layout_height="match_parent"
+          android:layout_weight="1" />
+
+      <Button
+          android:id="@+id/btnUp"
+          style="@style/Widget.AppCompat.Button.Borderless"
+          android:layout_width="0dp"
+          android:layout_height="match_parent"
+          android:layout_weight="1"
+          android:alpha="0.6"
+          android:background="@drawable/arrow_up"
+          android:onClick="moveUp" />
+
+      <Button
+          android:id="@+id/btnNOOP2"
+          style="@style/Widget.AppCompat.Button.Borderless"
+          android:layout_width="0dp"
+          android:layout_height="match_parent"
+          android:layout_weight="1" />
+
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+      <TextView
+          android:id="@+id/txtOffset"
+          android:layout_width="0dp"
+          android:layout_height="match_parent"
+          android:layout_weight="1"
+          android:text="@string/defaultOffset"
+          android:textAlignment="center" />
+
+      <TextView
+          android:id="@+id/txtRotation"
+          android:layout_width="0dp"
+          android:layout_height="match_parent"
+          android:layout_weight="1"
+          android:text="@string/initialRotation"
+          android:textAlignment="center" />
+
+      <Button
+          android:id="@+id/btnLeft"
+          style="@style/Widget.AppCompat.Button.Borderless"
+          android:layout_width="0dp"
+          android:layout_height="match_parent"
+          android:layout_weight="1"
+          android:alpha="0.6"
+          android:background="@drawable/arrow_left"
+          android:onClick="moveLeft" />
+
+      <Button
+          android:id="@+id/btnNOOP6"
+          style="@style/Widget.AppCompat.Button.Borderless"
+          android:layout_width="0dp"
+          android:layout_height="match_parent"
+          android:layout_weight="1" />
+
+      <Button
+          android:id="@+id/btnRight"
+          style="@style/Widget.AppCompat.Button.Borderless"
+          android:layout_width="0dp"
+          android:layout_height="match_parent"
+          android:layout_weight="1"
+          android:alpha="0.6"
+          android:background="@drawable/arrow_right"
+          android:onClick="moveRight" />
+
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+      <Button
+          android:id="@+id/btnFactorDown"
+          style="@style/Widget.AppCompat.Button.Borderless"
+          android:layout_width="0dp"
+          android:layout_height="match_parent"
+          android:layout_weight="1"
+          android:alpha="0.6"
+          android:background="@drawable/triangle_down"
+          android:onClick="factorDown" />
+
+      <Button
+          android:id="@+id/btnRotateCW"
+          style="@style/Widget.AppCompat.Button.Borderless"
+          android:layout_width="0dp"
+          android:layout_height="match_parent"
+          android:layout_weight="1"
+          android:alpha="0.6"
+          android:background="@drawable/arrow_clockwise"
+          android:onClick="rotateCW" />
+
+      <Button
+          android:id="@+id/btnNOOP7"
+          style="@style/Widget.AppCompat.Button.Borderless"
+          android:layout_width="0dp"
+          android:layout_height="match_parent"
+          android:layout_weight="1" />
+
+      <Button
+          android:id="@+id/btnDown"
+          style="@style/Widget.AppCompat.Button.Borderless"
+          android:layout_width="0dp"
+          android:layout_height="match_parent"
+          android:layout_weight="1"
+          android:alpha="0.6"
+          android:background="@drawable/arrow_down"
+          android:onClick="moveDown" />
+
+      <Button
+          android:id="@+id/btnNOOP8"
+          style="@style/Widget.AppCompat.Button.Borderless"
+          android:layout_width="0dp"
+          android:layout_height="match_parent"
+          android:layout_weight="1" />
+    </TableRow>
+
+  </TableLayout>
+
+  <LinearLayout
+      android:id="@+id/secondRow"
+      android:layout_width="match_parent"
+      android:layout_height="100dp"
+      android:baselineAligned="false"
+      android:orientation="horizontal"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/firstRow"
+      tools:visibility="gone">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+      <androidx.constraintlayout.widget.ConstraintLayout
+          android:layout_width="match_parent"
+          android:layout_height="50dp">
+
+        <Button
+            android:id="@+id/btnScaleUp"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:alpha="0.6"
+            android:background="@drawable/upscale"
+            android:onClick="scaleUp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+      </androidx.constraintlayout.widget.ConstraintLayout>
+
+      <androidx.constraintlayout.widget.ConstraintLayout
+          android:layout_width="match_parent"
+          android:layout_height="50dp">
+
+        <Button
+            android:id="@+id/btnScaleDown"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:alpha="0.6"
+            android:background="@drawable/downscale"
+            android:onClick="scaleDown"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+      </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:alpha="0.6"
+        android:background="@drawable/vectors"
+        android:orientation="vertical">
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="50dp"
+          android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnAxisY"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="65dp"
+            android:layout_height="match_parent"
+            android:background="#00FFFFFF"
+            android:onClick="selectAxisY"
+            android:text="@string/lowercaseY" />
+
+        <Button
+            android:id="@+id/btnAxisX"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="#00FFFFFF"
+            android:onClick="selectAxisX"
+            android:text="@string/lowercaseX" />
+
+      </LinearLayout>
+
+      <Button
+          android:id="@+id/btnAxisZ"
+          style="@style/Widget.AppCompat.Button.Borderless"
+          android:layout_width="match_parent"
+          android:layout_height="50dp"
+          android:background="#00FFFFFF"
+          android:onClick="selectAxisZ"
+          android:text="@string/lowercaseZ" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+      <Button
+          android:id="@+id/btnForward"
+          style="@style/Widget.AppCompat.Button.Borderless"
+          android:layout_width="match_parent"
+          android:layout_height="50dp"
+          android:alpha="0.6"
+          android:background="@drawable/arrow_forward"
+          android:onClick="moveForward" />
+
+      <Button
+          android:id="@+id/btnBackward"
+          style="@style/Widget.AppCompat.Button.Borderless"
+          android:layout_width="match_parent"
+          android:layout_height="50dp"
+          android:alpha="0.6"
+          android:background="@drawable/arrow_back"
+          android:onClick="moveBackward" />
+    </LinearLayout>
+  </LinearLayout>
+
+  <LinearLayout
+      android:id="@+id/userRow"
+      android:layout_width="match_parent"
+      android:layout_height="100dp"
+      android:baselineAligned="false"
+      android:orientation="horizontal"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      tools:visibility="visible">
+
+    <TableLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="2">
+
+      <TableRow
+          android:layout_width="match_parent"
+          android:layout_height="0dp"
+          android:layout_weight="1">
+
+        <Button
+            android:id="@+id/btnTransformation"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#30000000"
+            android:onClick="switchTransformation"
+            android:text="@string/position"
+            android:textColor="#FFFFFF" />
+
+        <Button
+            android:id="@+id/btnIncrease"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/triangle_up"
+            android:onClick="increase" />
+
+      </TableRow>
+
+      <TableRow
+          android:layout_width="match_parent"
+          android:layout_height="0dp"
+          android:layout_weight="1">
+
+        <SeekBar
+            android:id="@+id/skbAmount"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:indeterminate="false"
+            android:max="3"
+            android:progress="2" />
+
+        <Button
+            android:id="@+id/btnDecrease"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/triangle_down"
+            android:onClick="decrease" />
+
+      </TableRow>
+
+    </TableLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:alpha="0.6"
+        android:background="@drawable/vectors"
+        android:orientation="vertical">
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="50dp"
+          android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnYAxisUser"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#00FFFFFF"
+            android:onClick="selectAxisY"
+            android:text="@string/lowercaseZ" />
+
+        <Button
+            android:id="@+id/btnXAxisUser"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#00FFFFFF"
+            android:onClick="selectAxisX"
+            android:text="@string/lowercaseX" />
+      </LinearLayout>
+
+      <Button
+          android:id="@+id/btnZAxisUser"
+          style="@style/Widget.AppCompat.Button.Borderless"
+          android:layout_width="match_parent"
+          android:layout_height="50dp"
+          android:background="#00FFFFFF"
+          android:onClick="selectAxisZ"
+          android:text="@string/lowercaseY" />
+
+    </LinearLayout>
+
+  </LinearLayout>
+
+  <LinearLayout
+      android:id="@+id/LastRow"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      tools:visibility="gone">
+
+    <Button
+        android:id="@+id/btnReset"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="#30000000"
+        android:onClick="resetValues"
+        android:text="@string/reset" />
+
+    <Button
+        android:id="@+id/btnSave"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="#30000000"
+        android:onClick="save"
+        android:text="@string/save" />
+
+    <!--    <Button-->
+    <!--        android:id="@+id/btnDebug"-->
+    <!--        style="@style/Widget.AppCompat.Button.Borderless"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_weight="1"-->
+    <!--        android:onClick="toggleDebugControls"-->
+    <!--        android:text="@string/debug" />-->
+  </LinearLayout>
+
+  <LinearLayout
+      android:id="@+id/lastUserRow"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      tools:visibility="visible">
+
+    <Button
+        android:id="@+id/btnResetUser"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="#30000000"
+        android:onClick="resetUserValues"
+        android:text="@string/reset" />
+
+    <ToggleButton
+        android:id="@+id/tglUserMode"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="#30000000"
+        android:textOff="@string/done"
+        android:textOn="@string/align" />
+
+    <Button
+        android:id="@+id/btnHelp"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="#30000000"
+        android:onClick="openTutorial"
+        android:text="@string/help" />
+
+  </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

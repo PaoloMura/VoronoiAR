@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SettingsActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="59dp"
+            android:text="@string/title_activity_settings"
+            android:textSize="35sp" />
+
+        <Switch
+            android:id="@+id/switch1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:text="@string/debug" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:text="@string/text_debug" />
+
+        <TableLayout
+            android:id="@+id/offsetTable"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            tools:visibility="visible">
+
+            <TableRow
+                android:id="@+id/AnchorRow"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <TextView
+                    android:id="@+id/anchorText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/anchor_number" />
+
+                <Spinner
+                    android:id="@+id/anchorValueSpinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/XOffsetRow"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/initialXPromptText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/initial_x_prompt" />
+
+                <EditText
+                    android:id="@+id/initialXValueText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:autofillHints=""
+                    android:ems="10"
+                    android:hint="@string/decimal_zero"
+                    android:inputType="number|textPersonName|numberDecimal"
+                    android:text="@string/decimal_zero" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/YOffsetRow"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/initialYPromptText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/initial_y_prompt" />
+
+                <EditText
+                    android:id="@+id/initialYValueText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:autofillHints=""
+                    android:ems="10"
+                    android:hint="@string/decimal_zero"
+                    android:inputType="number|textPersonName|numberDecimal"
+                    android:text="@string/decimal_zero" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/ZOffsetRow"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/initialZPromptText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/initial_z_prompt" />
+
+                <EditText
+                    android:id="@+id/initialZValueText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:autofillHints=""
+                    android:ems="10"
+                    android:hint="@string/decimal_zero"
+                    android:inputType="number|textPersonName|numberDecimal"
+                    android:text="@string/decimal_zero" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/XRotationRow"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/initialTXPromptText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/initial_tx_prompt" />
+
+                <EditText
+                    android:id="@+id/initialTXValueText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:autofillHints=""
+                    android:ems="10"
+                    android:hint="@string/decimal_zero"
+                    android:inputType="number|textPersonName|numberDecimal"
+                    android:text="@string/decimal_zero" />
+
+                <TextView
+                    android:id="@+id/piText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/times_pi" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/YRotationRow"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/initialTYPromptText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/initial_ty_prompt" />
+
+                <EditText
+                    android:id="@+id/initialTYValueText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:autofillHints=""
+                    android:ems="10"
+                    android:hint="@string/decimal_zero"
+                    android:inputType="number|textPersonName|numberDecimal"
+                    android:text="@string/decimal_zero" />
+
+                <TextView
+                    android:id="@+id/piText2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/times_pi" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/ZRotationRow"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/initialTZPromptText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/initial_tz_prompt" />
+
+                <EditText
+                    android:id="@+id/initialTZValueText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:autofillHints=""
+                    android:ems="10"
+                    android:hint="@string/decimal_zero"
+                    android:inputType="number|textPersonName|numberDecimal"
+                    android:text="@string/decimal_zero" />
+
+                <TextView
+                    android:id="@+id/piText3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/times_pi" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/ScaleRow"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/initialScalePromptText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/initial_scale_prompt" />
+
+                <EditText
+                    android:id="@+id/initialScaleValueText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:autofillHints=""
+                    android:ems="10"
+                    android:hint="@string/decimal_one"
+                    android:inputType="number|textPersonName|numberDecimal"
+                    android:text="@string/decimal_one" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/SubmissionRow"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:id="@+id/button_update_offsets"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="setOffsets"
+                    android:text="@string/update_offsets" />
+            </TableRow>
+        </TableLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,42 @@
+see https://developer.android.com/studio/publish/app-signing#enroll
+
+this step needs to be done after a google play developer account has been created
+
+opt in a new app
+  see https://developer.android.com/studio/publish/app-signing#enroll_new
+
+opt in an existing app
+  see https://developer.android.com/studio/publish/app-signing#enroll_existing
+  if an upload key doesn't exist for the app
+    see https://developer.android.com/studio/publish/app-signing#register_upload_key
+  changing the app signing key
+    see https://developer.android.com/studio/publish/app-signing#upgrade_key
+
+reset an upload key
+  see https://developer.android.com/studio/publish/app-signing#reset_upload_key
+
+automate app signing
+  done by assigning a signing configuration to the app (similar to debug signing)
+    see https://developer.android.com/studio/publish/app-signing#sign-auto
+  this causes signing information to be included in plain text in the app's Gradle build files
+  signing information should be kept secure and so should be stored separately when working in teams
+    see https://developer.android.com/studio/publish/app-signing#secure-shared-keystore
+
+signing different flavours of the app
+  see https://developer.android.com/studio/publish/app-signing#sign-flavors
+
+choosing not to opt in to play app signing
+  see https://developer.android.com/studio/publish/app-signing#opt-out
+
+reasons why the app signing certificate should be kept the same for the app's lifetime
+  see https://developer.android.com/studio/publish/app-signing#considerations
+
+keeping the app signing key secure
+  important
+  keep private key, keystore secure
+    see https://developer.android.com/studio/publish/app-signing#secure_key
+
+remove signing information from build files
+  when working in teams it is best practice to keep others from accessing signing information
+  this is done by creating separate files and then linking the build files to them
+    see https://developer.android.com/studio/publish/app-signing#secure-shared-keystore

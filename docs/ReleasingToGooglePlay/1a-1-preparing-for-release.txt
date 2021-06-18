@@ -1,0 +1,76 @@
+preparing for release
+see: https://developer.android.com/studio/publish/preparing
+
+overview
+  to release the app a 'release-ready' package needs to be created
+  the package will have the same components as the debug APK file
+  the difference is
+    - it is signed with a certificate 
+    - it is optimized with the 'zipalign' tool
+
+the process (5 tasks)
+
+  1. gather materials and resources
+       at minimum:
+         i.  a cryptographic key for authentication
+               see https://developer.android.com/studio/publish/preparing#publishing-keys
+         ii. an app icon
+               see https://developer.android.com/studio/publish/preparing#application-icon
+       it is possible to include an end-user license agreement
+         see https://developer.android.com/studio/publish/preparing#end-user-license-agreement
+       releasing on Google Play needs additional promotional text and screenshots of the app
+         see https://developer.android.com/studio/publish/preparing#miscellaneous-materials
+         see https://support.google.com/googleplay/android-developer/answer/9866151?visit_id=637476979732583064-760439187&rd=1
+
+  2. configure the app for release
+       the following are recommended changes to the source code, resource files, and application manifest
+       they're all on the same page at https://developer.android.com/studio/publish/preparing
+
+       i.   package name
+              must be suitable for the app's whole lifetime
+              it cannot be changed after the app is distributed
+              changed in the manifest file
+              see https://developer.android.com/studio/publish/preparing#choose-a-good-package-name
+    
+       ii.  removing certain code and files
+              see https://developer.android.com/studio/publish/preparing#turn-off-logging-and-debugging
+    
+       iii. organise directories
+              make sure the project files are organised according to a certain format
+              see https://developer.android.com/studio/publish/preparing#clean-up-your-project-directories
+    
+       iv.  update manifest and Gradle files
+              see https://developer.android.com/studio/publish/preparing#review-and-update-your-manifest-and-gradle-build-settings
+    
+       v.   make sure app is compatible with intended devices
+              see https://developer.android.com/studio/publish/preparing#address-compatibility-issues
+ 
+       vi.  update URLs for servers and services
+              (might be unneeded) 
+              see https://developer.android.com/studio/publish/preparing#update-urls-for-servers-and-services
+ 
+       vii. implement licensing
+              (probably unneeded, used for paid apps) 
+              see https://developer.android.com/studio/publish/preparing#implement-licensing-if-you-are-releasing-on-google-play
+  
+  3. build the app for release
+       after configuration the app can be built into a 'release-ready' APK file
+       it will be signed and optimized
+       overview
+         see https://developer.android.com/studio/publish/preparing#publishing-build
+       building the app requires it to be signed first with a certificate and private key
+       android studio helps generate one
+         see https://developer.android.com/studio/publish/preparing#building-with-android-studio
+       for how to sign the app
+         see https://developer.android.com/studio/publish/app-signing
+         see '1b-signing-the-app.txt'
+
+  4. prepare external servers and resources
+       if servers are used by the app, make sure they're set up
+         see https://developer.android.com/studio/publish/preparing#publishing-resources
+
+  5. testing
+       test the release version
+         see https://developer.android.com/studio/publish/preparing#publishing-test
+       for a list of suggested things to test
+         see https://developer.android.com/docs/quality-guidelines/core-app-quality

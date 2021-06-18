@@ -1,0 +1,6 @@
+2pm Thursday 22nd October
+
+This meeting followed the initial client meeting. Each team member debriefed the others on the findings from their own research task. The team members followed by setting up the Projects section on GitHub for assigning tasks in future. The main tasks that were assigned were:
+
+-Familiarisation with ARCore and Android studio using tutorials
+-Update GitHub and follow the SPE workbooks

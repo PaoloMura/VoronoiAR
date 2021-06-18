@@ -1,0 +1,9 @@
+future app versions
+see https://developer.android.com/studio/publish/versioning
+
+versioning the app
+  this is done in the Gradle build files
+  see https://developer.android.com/studio/publish/versioning#appversioning
+
+setting minimum API requirements
+  see https://developer.android.com/studio/publish/versioning#minsdkversion

@@ -1,0 +1,25 @@
+2pm Thursday 12th November
+
+Half an hour was spent discussing the following points:
+
+-Portfolio A
+  -use to guide initial project direction
+  -split work vs all on same sections
+-Contract
+  -which one was appropriate for the project
+  -how to sign given our separation
+-License
+  -confirmed MIT
+-Future meetings
+  -frequency
+  -collaboration
+
+The team then met with the mentor to cover the following:
+
+-Portfolio A advice
+  -allocate different sections to different people
+  -make requirements section very detailed
+-Contract
+  -could sign digitally using Adobe Acrobat
+-Borrowing an Android phone for testing purposes (for team members using iPhone)
+  -contact Luke Woodbury at engf-tech-hub@bristol.ac.uk

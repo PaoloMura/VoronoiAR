@@ -1,0 +1,13 @@
+9:30am Tuesday 27th October
+
+The team updated the client with a summary of research findings and questions. The results were:
+
+-Team queries
+  -it should be possible to erect plaques with QR codes around the room, client will investigate
+  -3D scanning the room may be a possibility, team should make their own enquiries with other uni departments if wanting to go down this route
+-Client updates
+  -building access is in progress...
+-License
+  -client is happy for the team to choose between MIT or GPL
+-Future
+  -client meetings will take place every two weeks for now

@@ -1,0 +1,5 @@
+google play developer account
+this is needed in order to be able to upload to google play store
+https://playacademy.exceedlms.com/student/path/35649
+https://play.google.com/console/about/
+https://support.google.com/googleplay/android-developer/answer/6112435

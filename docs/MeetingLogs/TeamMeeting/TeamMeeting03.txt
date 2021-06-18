@@ -1,0 +1,14 @@
+2pm Thursday 29th October
+
+The start of the meeting involved a check-in with the team's mentor to discuss the direction of the project and the objectives. The topics covered included:
+
+-Stakeholders
+  -visitors
+  -the team
+  -the mentor and SPE unit directors
+  -those who may have to maintain the app in the future
+-License
+-Springbooot
+-Additional potential features of the project (home page, information page, etc.)
+
+The second part was between the team members only. This determined tasks for the week which were added to the Projects section of GitHub.

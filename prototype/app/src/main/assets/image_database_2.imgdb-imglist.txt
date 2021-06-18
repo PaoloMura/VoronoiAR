@@ -1,0 +1,2 @@
+default|./anchors/defaultAnchor.jpg|0.14
+qr|./anchors/qrAnchor.jpg

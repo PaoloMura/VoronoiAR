@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+   Copyright 2016 Google LLC
+
+   Licensed under the Apache License, Version 2.0 (the "License");
+   you may not use this file except in compliance with the License.
+   You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+   Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an "AS IS" BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License.
+-->
+<resources>
+    <string name="app_name">Voronoi AR</string>
+
+    <!-- Debug Options -->
+    <string name="up_button">Up</string>
+    <string name="down_button">Down</string>
+    <string name="right_button">Right</string>
+    <string name="left_button">Left</string>
+    <string name="back_button">Back</string>
+    <string name="forward_button">Forw</string>
+    <string name="plus_button">Plus</string>
+    <string name="minus_button">Minus</string>
+    <string name="debug">Debug</string>
+    <string name="factor_up">x10</string>
+    <string name="factor_down">x0.1</string>
+    <string name="relative">Relative</string>
+    <string name="absolute">Absolute</string>
+    <string name="reset">Reset</string>
+    <string name="rotate">Rotate</string>
+
+    <!-- Page Titles -->
+    <string name="title_ar">View Tessellation</string>
+    <string name="title_activity_info">Information</string>
+    <string name="title_activity_settings">Settings</string>
+    <string name="tab_voronoi">Voronoi Patterns</string>
+    <string name="tab_sculpture">The Sculpture</string>
+
+    <!-- Preference Titles -->
+    <string name="preferences_category_developer">Developer</string>
+    <string name="preference_category_accessibility">Accessibility</string>
+
+    <!-- Developer Preferences -->
+    <string name="text_debug">Align tessellation manually</string>
+
+    <!-- Accessibility Preferences -->
+    <string name="preference_font_size">Font size</string>
+
+    <!-- Paragraphs -->
+    <string name="tab_paragraph_1">
+        A Voronoi pattern is formed by first choosing a set of points known as the seed.
+        These points are represented as black dots in the diagram above.
+        The Voronoi pattern itself is made up of cells around each of these points.
+        These are the coloured regions in the diagram.
+        Each cell is mathematically defined as the region of space that is closer to this point than any other.
+        Although the diagram shows a flat two-dimensional plane, Voronoi tessellations can exist in multi-dimensional space.
+        Using the "View Tessellation" feature of this app in the Fry Building will enable you to see a three-dimensional Voronoi tessellation.
+        \n\nFor more information visit <a href="https://www.bristol.ac.uk/maths/fry-building/public-art-strategy/what-is-a-voronoi-diagram/">the Universitys website</a>
+    </string>
+    <string name="tab_paragraph_2">
+        The sculpture (above) in the Fry Building is a slice of a three-dimensional Voronoi tessellation.
+        Using the "View Tessellation" feature of this app in the Fry Building will reveal the full tessellation.
+        Its seed is a set of approximately three hundred points within the Fry Building`s atrium.
+        \n\nFor more information visit <a href="https://www.bristol.ac.uk/cdt/compass/fry/">the Universitys website</a>
+    </string>
+
+    <string name="voronoi_2d_description">2D Voronoi pattern</string>
+    <string name="defaultOffset">1E0</string>
+    <string name="initialRotation">0.00 x π</string>
+    <string name="lowercaseY">y</string>
+    <string name="lowercaseX">x</string>
+    <string name="lowercaseZ">z</string>
+    <string name="password">Password</string>
+    <string name="enter_password_here">Enter password here</string>
+    <string name="confirm">Confirm</string>
+    <string name="initial_x_prompt">Initial x offset =</string>
+    <string name="decimal_zero">0.0</string>
+    <string name="initial_y_prompt">Initial y offset =</string>
+    <string name="initial_z_prompt">Initial z offset =</string>
+    <string name="initial_tx_prompt">Initial x rotation =</string>
+    <string name="initial_ty_prompt">Initial y rotation =</string>
+    <string name="initial_tz_prompt">Initial z rotation =</string>
+    <string name="initial_scale_prompt">Initial scale =</string>
+    <string name="update_offsets">Update Offsets</string>
+    <string name="times_pi">π</string>
+    <string name="decimal_one">1.0</string>
+    <string name="save">Save</string>
+    <string name="ar_description">Augmented reality view of the tessellation overlaid on the sculpture</string>
+    <string name="position">Position</string>
+    <string name="rotation">Rotation</string>
+    <string name="scale">Scale</string>
+    <string name="align">Align</string>
+    <string name="done">Done</string>
+    <string name="ar_tutorial">Point the centered rectangle at the QR code and slowly move your device back and forth until the rectangle disappears. \n\nUse the tools above to align the red sculpture to the real one. Press done to view the tessellation.</string>
+    <string name="got_it">Got it</string>
+    <string name="home">Home</string>
+    <string name="splash_screen_warrning">Please be mindful of your surroundings while using this app</string>
+    <string name="help">Help</string>
+    <string name="anchor_number">Anchor Number =</string>
+    <string name="zero">0</string>
+</resources>

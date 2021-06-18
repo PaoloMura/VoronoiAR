@@ -1,0 +1,10 @@
+uploading the app to the play console
+see https://developer.android.com/studio/publish/upload-bundle
+    https://support.google.com/googleplay/android-developer/answer/9859348?visit_id=637477193670739556-2413587209&rd=1
+
+preconditions
+1. (recommended) opt in to play app signing
+2. maximum file size of 150MB
+
+creating a release
+  tbc

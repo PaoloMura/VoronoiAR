@@ -1,0 +1,12 @@
+9:30am Tuesday 10th November
+
+The meeting involved a brief exchange of progress from both parties:
+
+-Client
+  -building access has now been granted
+  -a desk will be available as a workstation if notice is provided 24 hours in advance
+  -still waiting on architectural plans for the building
+  -suggested a potential non-vital feature could be to scan any 2D Voronoi pattern and then generate and render a 3D point structure for it
+-Team
+  -decided to go with MIT license
+  -chose to go down the route of designing a 3D model rather than real-time processing to start with

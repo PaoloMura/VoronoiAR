@@ -1,0 +1,24 @@
+releasing on google play
+see: https://developer.android.com/studio/publish
+     https://developer.android.com/distribute/google-play
+
+need a google play developer account
+
+the process
+
+  i.   prepare promotional materials
+         - provide screenshots
+         - videos 
+         - graphics
+         - promotional text
+
+  ii.  configure options
+         - options include country, language, price
+         - choose details such as application type, category, content rating
+  
+  iii. upload assets
+         - after options are configured, promotional materials can be uploaded
+         - application can also be uploaded as a draft (unpublished)
+
+  iv. publish application's release version
+        - click publish in the play console
